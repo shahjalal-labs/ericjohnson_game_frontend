@@ -1,0 +1,128 @@
+"use client";
+import Button from "@/components/share/ButtonPrimary";
+import { useEffect, useState } from "react";
+
+interface Participant {
+  id: number;
+  name: string;
+  avatar: string;
+  ready: boolean;
+}
+
+// --- Mock Data ----------------------------------------------------------------
+const PARTICIPANTS: Participant[] = [
+  { id: 1, name: "Savan Nguyen", avatar: "SN", ready: true },
+  { id: 2, name: "Darrell Steward", avatar: "DS", ready: true },
+  { id: 3, name: "Jane Cooper", avatar: "JC", ready: true },
+  { id: 4, name: "Esther Howard", avatar: "EH", ready: true },
+  { id: 5, name: "Jerome Bell", avatar: "JB", ready: true },
+  { id: 6, name: "Annette Black", avatar: "AB", ready: true },
+  { id: 7, name: "Ronald Richards", avatar: "RR", ready: true },
+  { id: 8, name: "Eleanor Pena", avatar: "EP", ready: true },
+];
+const AVATAR_COLORS = [
+  "from-rose-500 to-pink-600",
+  "from-amber-500 to-orange-600",
+  "from-emerald-500 to-teal-600",
+  "from-violet-500 to-purple-600",
+  "from-sky-500 to-blue-600",
+  "from-fuchsia-500 to-pink-600",
+  "from-lime-500 to-green-600",
+  "from-cyan-500 to-blue-600",
+];
+
+function AvatarBubble({
+  initials,
+  index,
+  size = "md",
+  ring = false,
+}: {
+  initials: string;
+  index: number;
+  size?: "sm" | "md" | "lg";
+  ring?: boolean;
+}) {
+  const sizeClasses = {
+    sm: "w-9 h-9 text-xs",
+    md: "w-11 h-11 text-sm",
+    lg: "w-14 h-14 text-base",
+  };
+  return (
+    <div
+      className={`
+        ${sizeClasses[size]} rounded-full bg-gradient-to-br ${AVATAR_COLORS[index % AVATAR_COLORS.length]}
+        flex items-center justify-center font-bold text-white flex-shrink-0
+        ${ring ? "ring-2 ring-amber-400/60 ring-offset-1 ring-offset-black" : ""}
+        shadow-lg
+      `}
+    >
+      {initials}
+    </div>
+  );
+}
+
+function SpinnerIcon() {
+  return (
+    <div className="relative w-10 h-10">
+      <div className="absolute inset-0 rounded-full border-2 border-white/10" />
+      <div className="absolute inset-0 rounded-full border-2 border-t-rose-500 border-r-amber-400 border-b-transparent border-l-transparent animate-spin" />
+    </div>
+  );
+}
+
+export default function BatchJoining() {
+  const question = '"What is your deal-breaker?"';
+  const [charIdx, setCharIdx] = useState(0);
+  const [loading, setLoading] = useState(false); // ✅ NEW
+
+  useEffect(() => {
+    if (charIdx < question.length) {
+      const t = setTimeout(() => setCharIdx((c) => c + 1), 40);
+      return () => clearTimeout(t);
+    }
+  }, [charIdx, question.length]);
+
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 flex flex-col gap-6 mt-22">
+      <p className="text-white/40 uppercase tracking-[0.25em] text-xs font-semibold">
+        Contestant 1
+      </p>
+
+      <div className="rounded-2xl border border-amber-500/30 bg-gradient-to-br from-black/90 to-rose-950/50 backdrop-blur-sm p-8 sm:p-14 flex flex-col items-center gap-8 min-h-[480px] justify-center">
+        {/* Animated question */}
+
+        <div className="4">
+          <div className="text-center w-full">
+            {/* Main Title */}
+            <h1 className="text-red-500 text-xl sm:text-2xl uppercase md:text-3xl lg:text-4xl font-semibold leading-relaxed">
+              THE Bach IS JUINGING...
+              <span className="ml-2">🌸</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-red-400 mt-4 text-sm sm:text-base md:text-lg font-medium">
+              Your fate is being decided.
+            </p>
+            <div className="flex justify-center mt-4">
+              <SpinnerIcon />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Active contestants strip */}
+      <div className="text-center">
+        <p className="text-white/30 text-xs uppercase tracking-widest mb-3">
+          Active Contestants
+        </p>
+        <div className="flex items-center justify-center flex-wrap gap-2">
+          {PARTICIPANTS.map((p, i) => (
+            <div key={p.id} className="relative">
+              <AvatarBubble initials={p.avatar} index={i} size="sm" ring />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

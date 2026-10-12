@@ -1,0 +1,407 @@
+﻿
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\LoginPage.tsx
+  224:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\SignupPage.tsx
+  54:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\VerificationPage.tsx
+  68:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\AgeRangeStep.tsx
+  34:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\AgeRangeStep.tsx:34:7
+  32 |   useEffect(() => {
+  33 |     if (minAge > maxAge) {
+> 34 |       setMinAge(maxAge)
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  35 |     }
+  36 |   }, [minAge, maxAge])
+  37 |  react-hooks/set-state-in-effect
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\AllowAccessStep.tsx
+  36:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\DatingPreferencesStep.tsx
+  111:25  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\EthnicityStep.tsx
+  90:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\EthnicityStep.tsx:90:7
+  88 |     // Initialize with Redux data if available
+  89 |     if (ethnicity.ethnicPreferences.value.length > 0) {
+> 90 |       setSelected(ethnicity.ethnicPreferences.value)
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  91 |     }
+  92 |     setIsDealbreaker(ethnicity.isDealbreaker)
+  93 |   }, [ethnicity.ethnicPreferences.value, ethnicity.isDealbreaker])  react-hooks/set-state-in-effect
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\RelationshipStep.tsx
+   70:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\RelationshipStep.tsx:70:7
+  68 |     // Initialize with Redux data if available
+  69 |     if (relationship.relationshipType.value.length > 0) {
+> 70 |       setSelected(relationship.relationshipType.value)
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  71 |     }
+  72 |   }, [relationship.relationshipType.value])
+  73 |  react-hooks/set-state-in-effect
+  104:71  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react/no-unescaped-entities
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\ReligionStep.tsx
+  90:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\ReligionStep.tsx:90:7
+  88 |     // Initialize with Redux data if available
+  89 |     if (religion.religiousPreferences.value.length > 0) {
+> 90 |       setSelected(religion.religiousPreferences.value)
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  91 |     }
+  92 |     setIsDealbreaker(religion.isDealbreaker)
+  93 |   }, [religion.religiousPreferences.value, religion.isDealbreaker])  react-hooks/set-state-in-effect
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\SelectInterestsStep.tsx
+  177:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\SetupProfileFormStep.tsx
+  372:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  394:60  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  401:67  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  425:60  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  438:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\auth\onbording\SetupProfilePhotoStep.tsx
+  129:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\contestants\quesationShow\QuesationShowAndAns.tsx
+  458:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  460:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  485:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  510:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  569:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  572:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  582:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  635:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  674:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  692:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  704:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  705:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\contestants\quesationShow\Videocallround.tsx
+  664:52  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\contestants\quesationShow\Videocallround.tsx:664:52
+  662 |   const currentUser = useSelector((state: any) => state.user.user);
+  663 |   const roomId = `${currentUser?.id ?? ""}${gameId}`;
+> 664 |   const userId = currentUser?.id ?? `participant-${Date.now()}`;
+      |                                                    ^^^^^^^^^^ Cannot call impure function
+  665 |   const userName = currentUser?.name ?? currentUser?.username ?? "Contestant";
+  666 |
+  667 |   // ΓöÇΓöÇ Start / stop timer ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ                                                                                                                                                                                                                                                                                                                                                                react-hooks/purity
+  698:5   error  Error: Cannot access variable before it is declared
+
+`showToast` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\contestants\quesationShow\Videocallround.tsx:698:5
+  696 |     if (callEndedKey === 0) return;
+  697 |     stopTimer();
+> 698 |     showToast("Host ended the call.");
+      |     ^^^^^^^^^ `showToast` accessed before it is declared
+  699 |     setCallPhase("ended_by_host");
+  700 |     setTimeout(() => setCallPhase("waiting"), 2500);
+  701 |   }, [callEndedKey]);
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\contestants\quesationShow\Videocallround.tsx:703:3
+  701 |   }, [callEndedKey]);
+  702 |
+> 703 |   const showToast = (msg: string) => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 704 |     setToast(msg);
+      | ^^^^^^^^^^^^^^^^^^
+> 705 |     if (toastRef.current) clearTimeout(toastRef.current);
+      | ^^^^^^^^^^^^^^^^^^
+> 706 |     toastRef.current = setTimeout(() => setToast(null), 3500);
+      | ^^^^^^^^^^^^^^^^^^
+> 707 |   };
+      | ^^^^^ `showToast` is declared here
+  708 |
+  709 |   const handleJoin = () => {
+  710 |     showToast("Connecting to callΓÇª");  react-hooks/immutability
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\home\DownloadAppsSection.tsx
+  29:41  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\home\GameSection.tsx
+   58:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  112:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  132:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\messages\useChatSocket.ts
+   30:13  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+   95:30  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+   96:27  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+  150:21  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+  289:45  error  Error: Cannot access variable before it is declared
+
+`connectWebSocket` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\messages\useChatSocket.ts:289:45
+  287 |         setConnectionStatus("error");
+  288 |         if (!reconnectRef.current) {
+> 289 |           reconnectRef.current = setTimeout(connectWebSocket, 3000);
+      |                                             ^^^^^^^^^^^^^^^^ `connectWebSocket` accessed before it is declared
+  290 |         }
+  291 |       };
+  292 |
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\messages\useChatSocket.ts:67:3
+   65 |
+   66 |   // Connect WebSocket
+>  67 |   const connectWebSocket = useCallback(() => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |     if (!token) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+>  69 |
+      ΓÇª
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 308 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+> 309 |   }, [token, userId]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^ `connectWebSocket` is declared here
+  310 |
+  311 |   // Single effect to initialize WebSocket
+  312 |   useEffect(() => {  react-hooks/immutability
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\myprofile\MyProfile.tsx
+   63:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  195:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundOne\InternetBachelor.tsx
+  321:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundOne\InternetBachelor.tsx:321:5
+  319 |     if (!showEnded) return;
+  320 |     let count = 3;
+> 321 |     setCountdown(count);
+      |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  322 |     countdownRef.current = setInterval(() => {
+  323 |       count -= 1;
+  324 |       setCountdown(count);  react-hooks/set-state-in-effect
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundOne\thniking\Thinking.tsx
+  130:11  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  130:23  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx
+   769:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:769:5
+  767 |     if (!running) return;
+  768 |     // Reset every time the timer starts
+> 769 |     setSeconds(0);
+      |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  770 |     expiredRef.current = false;
+  771 |
+  772 |     const id = setInterval(() => {                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/set-state-in-effect
+  1000:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:1000:5
+   998 |     if (statusRef.current !== "calling" && statusRef.current !== "accepted")
+   999 |       return;
+> 1000 |     set("accepted");
+       |     ^^^ Avoid calling setState() directly within an effect
+  1001 |     const t = setTimeout(() => {
+  1002 |       if (statusRef.current === "accepted") set("connected");
+  1003 |     }, 1800);                                                                                                                                                                                                                                                                                                                                   react-hooks/set-state-in-effect
+  1016:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:1016:5
+  1014 |       payload: { userId: player.id, reason: "rejected" },
+  1015 |     });
+> 1016 |     set("rejected");
+       |     ^^^ Avoid calling setState() directly within an effect
+  1017 |     const t = setTimeout(onClose, 2800);
+  1018 |     return () => clearTimeout(t);
+  1019 |   }, [callRejected]);                                                                                                                                                                                                                                                                                                                                                                        react-hooks/set-state-in-effect
+  1078:39  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `sendEvent`, but the source dependencies were [player.id]. Inferred different dependency than source.
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:1078:39
+  1076 |
+  1077 |   // ΓöÇΓöÇ handleZegoLeave: called when Zego itself ends (user pressed leave) ΓöÇΓöÇΓöÇΓöÇ
+> 1078 |   const handleZegoLeave = useCallback(() => {
+       |                                       ^^^^^^^
+> 1079 |     // Clear the 60s timer since the call ended naturally
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1080 |     if (hardLimitTimerRef.current) {
+       ΓÇª
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1090 |     setTimeout(onClose, 1200);
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1091 |   }, [player.id]);
+       | ^^^^ Could not preserve existing manual memoization
+  1092 |
+  1093 |   // ΓöÇΓöÇ handleTimerExpire: called by CallTimer UI at 60s (visual backup) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  1094 |   // The primary enforcer is the useEffect setTimeout above                                                             react-hooks/preserve-manual-memoization
+  1078:39  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `onClose`, but the source dependencies were [player.id]. Inferred different dependency than source.
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:1078:39
+  1076 |
+  1077 |   // ΓöÇΓöÇ handleZegoLeave: called when Zego itself ends (user pressed leave) ΓöÇΓöÇΓöÇΓöÇ
+> 1078 |   const handleZegoLeave = useCallback(() => {
+       |                                       ^^^^^^^
+> 1079 |     // Clear the 60s timer since the call ended naturally
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1080 |     if (hardLimitTimerRef.current) {
+       ΓÇª
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1090 |     setTimeout(onClose, 1200);
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1091 |   }, [player.id]);
+       | ^^^^ Could not preserve existing manual memoization
+  1092 |
+  1093 |   // ΓöÇΓöÇ handleTimerExpire: called by CallTimer UI at 60s (visual backup) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  1094 |   // The primary enforcer is the useEffect setTimeout above                                                               react-hooks/preserve-manual-memoization
+  1096:41  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `sendEvent`, but the source dependencies were [player.id]. Inferred different dependency than source.
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:1096:41
+  1094 |   // The primary enforcer is the useEffect setTimeout above.
+  1095 |   // This is a secondary backup fired by the CallTimer component's onExpire.
+> 1096 |   const handleTimerExpire = useCallback(() => {
+       |                                         ^^^^^^^
+> 1097 |     if (statusRef.current !== "connected" && statusRef.current !== "accepted")
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1098 |       return;
+       ΓÇª
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1113 |     setTimeout(onClose, 2000);
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1114 |   }, [player.id]);
+       | ^^^^ Could not preserve existing manual memoization
+  1115 |
+  1116 |   const handleRemoteJoined = useCallback(() => {
+  1117 |     setRemoteJoined(true);  react-hooks/preserve-manual-memoization
+  1096:41  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `onClose`, but the source dependencies were [player.id]. Inferred different dependency than source.
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\roundTwo\GrandFinal\HostVideoCall.tsx:1096:41
+  1094 |   // The primary enforcer is the useEffect setTimeout above.
+  1095 |   // This is a secondary backup fired by the CallTimer component's onExpire.
+> 1096 |   const handleTimerExpire = useCallback(() => {
+       |                                         ^^^^^^^
+> 1097 |     if (statusRef.current !== "connected" && statusRef.current !== "accepted")
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1098 |       return;
+       ΓÇª
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1113 |     setTimeout(onClose, 2000);
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 1114 |   }, [player.id]);
+       | ^^^^ Could not preserve existing manual memoization
+  1115 |
+  1116 |   const handleRemoteJoined = useCallback(() => {
+  1117 |     setRemoteJoined(true);    react-hooks/preserve-manual-memoization
+  1552:23  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 react/no-unescaped-entities
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\snapEdit\Snapedit.tsx
+  194:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\startgame\StartGame.tsx
+  188:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\startgame\StartGame.tsx:188:5
+  186 |
+  187 |   useEffect(() => {
+> 188 |     resetControlsTimer();
+      |     ^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  189 |     return () => {
+  190 |       if (controlsTimer.current) clearTimeout(controlsTimer.current);
+  191 |     };                  react-hooks/set-state-in-effect
+  203:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\components\startgame\StartGame.tsx:203:5
+  201 |     if (!showEnded) return;
+  202 |     let count = 3;
+> 203 |     setCountdown(count);
+      |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  204 |     countdownRef.current = setInterval(() => {
+  205 |       count -= 1;
+  206 |       setCountdown(count);  react-hooks/set-state-in-effect
+  450:43  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+C:\BD_Calling_It_Projects_Rony\Team Unity\erichJohnson\ericjohnson_game\src\lib\jwt.ts
+  22:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 58 problems (58 errors, 0 warnings)
+

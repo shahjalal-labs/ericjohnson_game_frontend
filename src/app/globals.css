@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030911;
+  --foreground: #ffffff;
+  --primary: #980d18;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #030911;
+    --foreground: #ffffff;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background-color: #050505;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* In your global CSS file */
+.notification-modal .ant-modal-content {
+  background-color: transparent !important;
+}
+
+.notification-modal .ant-modal-header {
+  background-color: #1A0500 !important;
+}
+
+.notification-modal .ant-modal-body {
+  background-color: #1A0500 !important;
+}
+
+.notification-modal .ant-modal-footer {
+  background-color: #1A0500 !important;
+}
+
+.notification-modal .ant-modal-close {
+  color: rgba(245, 158, 11, 0.6) !important;
+}
+
+.notification-modal .ant-modal-close:hover {
+  color: #fbbf24 !important;
+}
+
+/* Remove any white backgrounds from Ant Design modal mask */
+.ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
